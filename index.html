@@ -15,6 +15,42 @@
     background-attachment: fixed;
     background-size: 100% 100%;
   }
+  
+  .scoreboard{
+      display:grid;
+      grid-template-columns: repeat(2,1fr);
+      width: 300px;
+      font-family: 'Quiksand',sans-seirf;
+
+  }
+  .scoreboard__score{
+      padding:10px;
+      text-align:center;
+      font-size: 2em;
+  }
+  .scoreboard__name{
+      font-weight:bold;
+      border-bottom: 1px solid darkred;
+      color: blue;
+      font-size: 30px;
+  }
+  
+  .scoreboard__controls{
+       display:flex;
+  }
+  .scoreboard__controls-button{
+      flex-grow:1;
+      border:none;
+      background:darkgrey;
+      cursor: pointer;
+      font-size: 1.2em;
+  }
+  .scoreboard__controls-button:hover{
+      background:dimgray
+  }
+  .scoreboard__controls-button:active{
+      background: dimgray;
+  }
 </style>
 <canvas id="my-canvas" width="1000" height="500"></canvas>
 <div align="center">
@@ -24,5 +60,21 @@
   <button   id="forward"> Forward(Right-Arrow key)</button>
   <button id="block">block(Backspace key) </button>
 </div>
+<div class="scoreboard">
+  <div class="scoreboard__name ">player one</div>
+  <div class="scoreboard__name ">player two</div>
+  <div class="scoreboard__score" >0</div>
+  <div class="scoreboard__score" >0</div>
+  <div class="scoreboard__controls" data-for-player="one">
+      <button class="scoreboard__controls-button">-</button>
+      <button class="scoreboard__controls-button">+</button>
+  </div>
+  <div class="scoreboard__controls" data-for-player="two">
+      <button class="scoreboard__controls-button">-</button>
+      <button class="scoreboard__controls-button">+</button>
+  </div>
+
+  </div>
+
 
 <script src="main.js"></script>
