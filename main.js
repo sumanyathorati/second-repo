@@ -10,7 +10,7 @@ let loadImage = (src, callback) => {
 };
 
 let imagePath = (frameNumber, animation) => {
-  return "/images/" + animation + "/" + frameNumber + ".png";
+  return "./images/" + animation + "/" + frameNumber + ".png";
 };
 
 let frames = {
@@ -128,7 +128,7 @@ let opploadImage = (oppsrc, callback) => {
 };
 
 let oppimagePath = (frameNumber, oppanimation) => {
-  return "/images-2/" + oppanimation + "/" + frameNumber + ".png";
+  return "./images-2/" + oppanimation + "/" + frameNumber + ".png";
 };
 
 let oppframes = {
